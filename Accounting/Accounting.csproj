@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8FC8A972-AE9D-432B-95F3-EEA163032C15}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Accounting</RootNamespace>
+    <AssemblyName>Accounting</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountInsertFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountInsertFRM.Designer.cs">
+      <DependentUpon>AccountInsertFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountListFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountListFRM.Designer.cs">
+      <DependentUpon>AccountListFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountUpdateFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountUpdateFRM.Designer.cs">
+      <DependentUpon>AccountUpdateFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DocumentListFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentListFRM.Designer.cs">
+      <DependentUpon>DocumentListFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentUpdateFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentUpdateFRM.Designer.cs">
+      <DependentUpon>DocumentUpdateFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DocumentInsertFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DocumentInsertFRM.Designer.cs">
+      <DependentUpon>DocumentInsertFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GozareshFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GozareshFRM.Designer.cs">
+      <DependentUpon>GozareshFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IRepositories\IAccountRepository.cs" />
+    <Compile Include="IRepositories\IDocumentRepository.cs" />
+    <Compile Include="IRepositories\ITarazRepository.cs" />
+    <Compile Include="IRepositories\IUserRepository.cs" />
+    <Compile Include="MainFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFRM.Designer.cs">
+      <DependentUpon>MainFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Document.cs" />
+    <Compile Include="Models\Taraz.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AccountRepository.cs" />
+    <Compile Include="Repositories\DocumentRepository.cs" />
+    <Compile Include="Repositories\TarazRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="TarazInsertFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarazInsertFRM.Designer.cs">
+      <DependentUpon>TarazInsertFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarazListFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarazListFRM.Designer.cs">
+      <DependentUpon>TarazListFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TarazUpdateFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TarazUpdateFRM.Designer.cs">
+      <DependentUpon>TarazUpdateFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserInsertFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInsertFRM.Designer.cs">
+      <DependentUpon>UserInsertFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserListFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserListFRM.Designer.cs">
+      <DependentUpon>UserListFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserUpdateFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserUpdateFRM.Designer.cs">
+      <DependentUpon>UserUpdateFRM.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountInsertFRM.resx">
+      <DependentUpon>AccountInsertFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountListFRM.resx">
+      <DependentUpon>AccountListFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountUpdateFRM.resx">
+      <DependentUpon>AccountUpdateFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentInsertFRM.resx">
+      <DependentUpon>DocumentInsertFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentListFRM.resx">
+      <DependentUpon>DocumentListFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DocumentUpdateFRM.resx">
+      <DependentUpon>DocumentUpdateFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GozareshFRM.resx">
+      <DependentUpon>GozareshFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFRM.resx">
+      <DependentUpon>MainFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="TarazInsertFRM.resx">
+      <DependentUpon>TarazInsertFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarazListFRM.resx">
+      <DependentUpon>TarazListFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarazUpdateFRM.resx">
+      <DependentUpon>TarazUpdateFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInsertFRM.resx">
+      <DependentUpon>UserInsertFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserListFRM.resx">
+      <DependentUpon>UserListFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserUpdateFRM.resx">
+      <DependentUpon>UserUpdateFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Basic-accounting-training.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
